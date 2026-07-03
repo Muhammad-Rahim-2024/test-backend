@@ -1,4 +1,4 @@
-name: Using Shared Pipelinec- Build Docker Image and Push to Dockerhub
+name: Using Shared Pipeline - Build Docker Image and Push to Dockerhub
 
 on:
   workflow_dispatch:
@@ -20,6 +20,8 @@ jobs:
     secrets:
       dockerhub-username: ${{ secrets.DOCKERHUB_USER }}
       dockerhub-password: ${{ secrets.DOCKERHUB_PASS }}
+      # Pass your PAT token down to the shared pipeline
+      repo-pat-token: ${{ secrets.DEPENDENCY_REPO_PAT_TOKEN }}
   
 
 
