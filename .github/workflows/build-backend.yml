@@ -15,6 +15,11 @@ jobs:
       date: 7-3-2026
 
 
+    # login to dockerhub using secrets
+    secrets:
+      dockerhub-username: ${{ secrets.DOCKERHUB_USER }}
+      dockerhub-password: ${{ secrets.DOCKERHUB_PASS }}
+
 
 
   
