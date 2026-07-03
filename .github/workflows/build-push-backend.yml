@@ -1,0 +1,25 @@
+name: Using Shared Pipelinec- Build Docker Image and Push to Dockerhub
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  build-push-backend:
+    uses: Muhammad-Rahim-2024/shared-pipelines/.github/workflows/build-push-docker.yml@main
+    with:
+      # format for repo-name: owner/repository.
+      repo-name: Muhammad-Rahim-2024/node-todo-cicd
+      repo-branch: main
+      docker-image-name: node-todo-shared-pipeline
+    
+
+    secrets:
+      dockerhub-username: ${{ secrets.DOCKERHUB_USER }}
+      dockerhub-password: ${{ secrets.DOCKERHUB_PASS }}
+  
+
+
