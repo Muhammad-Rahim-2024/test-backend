@@ -13,7 +13,7 @@ jobs:
     with:
       # format for repo-name: owner/repository.
       repo-name: Muhammad-Rahim-2024/node-todo-cicd
-      repo-branch: main
+      repo-branch: master
       docker-image-name: node-todo-shared-pipeline
     
 
