@@ -1,0 +1,15 @@
+name: Build Backend using Shared Pipeline
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  build-backend:
+    uses: Muhammad-Rahim-2024/shared-pipelines/.github/workflows/build.yml@main
+
+
+
+
+  
