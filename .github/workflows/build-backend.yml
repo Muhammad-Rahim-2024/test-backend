@@ -10,6 +10,11 @@ jobs:
     uses: Muhammad-Rahim-2024/shared-pipelines/.github/workflows/build.yml@main
 
 
+    with:
+      project-name: test-backedn
+      date: 7-3-2026
+
+
 
 
   
