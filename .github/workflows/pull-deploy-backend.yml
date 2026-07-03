@@ -1,0 +1,22 @@
+name: Using Shared Pipeline - Pull Image from Docker and Deploy/Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pull-deploy-backend:
+    uses: Muhammad-Rahim-2024/shared-pipelines/.github/workflows/pull-deploy-docker.yml@main
+    
+    with:
+      docker-image-name: node-todo-shared-pipeline
+      machine-port: "9000"
+      container-port: "8000"
+  
+    secrets:
+      dockerhub-username: ${{ secrets.DOCKERHUB_USER }}
+      dockerhub-password: ${{ secrets.DOCKERHUB_PASS }}
+      ssh-host: ${{ secrets.SSH_HOST }}
+      ssh-username: ${{ secrets.SSH_USERNAME }}
+      ssh-key: ${{ secrets.SSH_KEY }}
+
+
