@@ -13,7 +13,9 @@ jobs:
     with:
       project-name: test-backedn
       date: 7-3-2026
-
+      # login to dockerhub using input/variables
+      dockerhub-username-input: muhammadrahimharoon
+      
 
     # login to dockerhub using secrets
     secrets:
