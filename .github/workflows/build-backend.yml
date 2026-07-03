@@ -1,9 +1,10 @@
 name: Build Backend using Shared Pipeline
 
 on:
-  push:
-    branches: 
-      - main
+  workflow_dispatch: 
+  # push:
+  #   branches: 
+  #     - main
 
 jobs:
   build-backend:
